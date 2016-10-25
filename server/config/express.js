@@ -33,7 +33,7 @@ export default function(app) {
       ]
     }));
   }
-  
+
   if (env === 'development' || env === 'test') {
     app.use(express.static(path.join(config.root, '.tmp')));
   }
