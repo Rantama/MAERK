@@ -13,6 +13,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
       <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
       <!-- endbower -->
     <!-- endbuild -->
@@ -312,15 +314,15 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="maerkApp">
+  <body ng-app="maerkApp" layout = 'column' flex>
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-    <div ui-view=""></div>
-    <footer></footer>
+    <ui-view layout = 'column' flex></ui-view>
+    <!-- <footer></footer> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
