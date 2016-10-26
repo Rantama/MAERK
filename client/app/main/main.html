@@ -1,4 +1,4 @@
-<header class="hero-unit" id="banner">
+<!-- <header class="hero-unit" id="banner">
   <div class="container">
     <h1>'Hello, Hello!</h1>
     <p class="lead">Kick-start your next web app with Angular Fullstack</p>
@@ -14,4 +14,96 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
+
+<section layout="row" flex>
+
+  <md-sidenav
+      class="md-sidenav-left "
+      md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-md')"
+      md-whiteframe= "4">
+
+
+    <md-toolbar class="md-theme-indigo" layout layout-align = "center center">
+        <h1>Side Nav Left</h1>
+    </md-toolbar>
+
+      <md-list-item>
+        <p>Reports</p>
+
+        <md-menu class="md-secondary">
+          <md-button class="md-icon-button">
+            <md-icon md-svg-icon="communication:message"></md-icon>
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button>
+                Skills
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button>
+                Client
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button>
+                Recruiter
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+      </md-list-item>
+
+          <md-list-item ng-click = "null">
+            <a ui-sref = "employee">Employees</a>
+          </md-list-item>
+          <md-list-item ng-click = "null">
+            <a ui-sref = "recruiters">Recruiters</a>
+          </md-list-item>
+          <md-list-item ng-click = "null">
+            <a ui-sref = "request quarters">Request Quarters</a>
+          </md-list-item>
+
+<!--
+     </md-input-container>
+     <md-toolbar-filler layout layout-align = "center center">
+       <md-button class="md-raised" aria-label="Reports">
+        Reports
+       </md-button>
+     </md-toolbar-filler>
+
+     <md-toolbar-filler layout layout-align = "center center">
+       <md-button class="md-raised" aria-label="skills">
+        Skills
+       </md-button>
+     </md-toolbar-filler>
+     <md-toolbar-filler layout layout-align = "center center">
+       <md-button class="md-raised" aria-label="recruiter">
+         Recruiters
+       </md-button>
+     </md-toolbar-filler>
+     <md-toolbar-filler layout layout-align = "center center">
+       <md-button class="md-raised" aria-label="client">
+         Clients
+       </md-button>
+     </md-toolbar-filler>
+ </md-sidenav>
+    <md-content layout-padding >
+
+    </md-content>
+
+  </md-sidenav>
+
+  <md-content flex layout-padding>
+
+    <ui-view></ui-view>
+
+  </md-content>
+
+
+
+</section> -->

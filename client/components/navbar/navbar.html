@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
+<!-- <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">maerk</a>
+      <a href="/" class="navbar-brand">Maerk</a>
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
@@ -26,4 +26,54 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
+
+
+
+<!-- <md-toolbar class="md-padding"> -->
+<!--
+        <img src="assets/images/ksq.png" alt="I'm Yeoman">
+        <i class="material-icons md-36">&#xE8B8;</i>
+<i class="material-icons md-36">&#xE7FD;</i>
+-->
+   <!-- <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                <img src="assets/images/ksquare_logo_35px.png" alt="I'm Yeoman">
+        <div class='Icons'>
+            <i class="material-icons">&#xE8B9;</i>
+            <i class="material-icons">&#xE866;</i>
+            </div>
+     <md-nav-item md-nav-click="goto('page1')" name="page1">Logout</md-nav-item>
+     <md-nav-item md-nav-sref="app.page2" name="page2">Settings</md-nav-item> -->
+
+     <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
+     <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
+     <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
+     -->
+   <!-- </md-nav-bar>
+   <div class="ext-content"> -->
+<!--
+     External content for
+            `<span>{{currentNavItem}}</span>`
+-->
+   <!-- </div>
+ </md-toolbar> -->
+
+<md-toolbar class="md-padding">
+  <div ng-cloak layout="row" md-is-locked-open="gt-md">
+   <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+     <md-tooltip>Side Panel</md-tooltip>
+    <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+  </md-button>
+
+  <!-- <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links"> -->
+               <img src="assets/images/ksquare_logo_35px.png" alt="I'm Yeoman">
+
+        <span flex></span>
+        <md-button class="md-raised" aria-label="Learn More">
+          Log Out
+        </md-button>
+        <md-button>
+          <md-icon <i class="material-icons">&#xE8B9;</i></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
