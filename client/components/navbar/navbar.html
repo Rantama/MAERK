@@ -59,8 +59,15 @@
  </md-toolbar> -->
 
 <md-toolbar class="md-padding">
-  <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+  <div ng-cloak layout="row" md-is-locked-open="gt-md">
+   <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+     <md-tooltip>Side Panel</md-tooltip>
+    <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+  </md-button>
+
+  <!-- <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links"> -->
                <img src="assets/images/ksquare_logo_35px.png" alt="I'm Yeoman">
+
         <span flex></span>
         <md-button class="md-raised" aria-label="Learn More">
           Log Out
