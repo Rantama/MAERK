@@ -5,6 +5,7 @@ angular.module('maerkApp', ['maerkApp.auth', 'maerkApp.admin', 'maerkApp.constan
   ])
   .config(function($urlRouterProvider, $locationProvider, $mdThemingProvider) {
     $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
     $mdThemingProvider.theme('default')
         .primaryPalette('pink')
         .accentPalette('orange');
