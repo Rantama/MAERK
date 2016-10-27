@@ -28,7 +28,7 @@
     <md-toolbar class="md-theme-indigo" layout layout-align = "center center">
         <h1>Side Nav Left</h1>
     </md-toolbar>
-
+<md-content>
       <md-list-item>
         <p>Reports</p>
 
@@ -58,16 +58,19 @@
 
       </md-list-item>
 
-          <md-list-item ng-click = "null">
-            <a ui-sref = "employee">Employees</a>
+          <md-list-item ui-sref = ".employee">
+            Employees
           </md-list-item>
           <md-list-item ng-click = "null">
-            <a ui-sref = "recruiters">Recruiters</a>
+            <p>Recruiters</p>
           </md-list-item>
           <md-list-item ng-click = "null">
-            <a ui-sref = "request quarters">Request Quarters</a>
+            <p>Request Quarters</p>
           </md-list-item>
-
+      </md-content>
+    </md-sidenav>
+    <div ui-view flex>gkg</div>
+  </section>
 <!--
      </md-input-container>
      <md-toolbar-filler layout layout-align = "center center">
