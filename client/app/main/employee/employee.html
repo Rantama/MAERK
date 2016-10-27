@@ -1,0 +1,38 @@
+
+<div layout-margin flex>
+  <md-card style="margin:0px">
+           <md-input-container style="margin:15px;">
+               <label>Filter by search</label>
+               <input type="text" ng-model="filterName">
+           </md-input-container>
+
+           <div ng-hide="true">
+               {{(filteredItems = (EmployeeInfo | filter: filterName))}}
+           </div>
+       </md-card>
+  <mdt-table table-card = "{title: 'Employee'}"
+
+      mdt-row="{
+          'data': filteredItems,
+          'column-keys': [
+              'name',
+              'clients',
+              'skills',
+              'recruiter',
+              'revenue'
+          ],
+      }">
+      <mdt-header-row>
+      <mdt-column align-rule="left"ß
+                  column-sort="true">Employee Name</mdt-column>
+      <mdt-column align-rule="left"
+                  column-sort="true">Clients</mdt-column>
+      <mdt-column align-rule="left"
+                  column-sort="true">Skills</mdt-column>
+      <mdt-column align-rule="left"
+                  column-sort="true">Recruiter</mdt-column>
+      <mdt-column align-rule="left"
+                  column-sort="true">Revenue</mdt-column>
+      </mdt-header-row>
+  </mdt-table>
+</div>
