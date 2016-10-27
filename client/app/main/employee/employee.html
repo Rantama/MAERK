@@ -11,9 +11,9 @@
            </div>
        </md-card>
   <mdt-table table-card = "{title: 'Employee'}"
-
+       paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}" 
       mdt-row="{
-          'data': filteredItems, 
+          'data': filteredItems,
           'column-keys': [
               'name',
               'clients',

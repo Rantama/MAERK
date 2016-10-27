@@ -7,7 +7,7 @@ angular.module('maerkApp', ['maerkApp.auth', 'maerkApp.admin', 'maerkApp.constan
     $urlRouterProvider.otherwise('/');
     $urlRouterProvider.otherwise('/login');
     $mdThemingProvider.theme('default')
-        .primaryPalette('pink')
+        .primaryPalette('blue')
         .accentPalette('orange');
     $locationProvider.html5Mode(true);
   });
