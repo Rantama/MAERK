@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 
-var EmployeeSchema = new mongoose.Schema ({
+var EmployeeSchema = new mongoose.Schema({
   first_name: {
     type: String,
     require: true
@@ -53,7 +53,7 @@ var EmployeeSchema = new mongoose.Schema ({
   },
   target_hourly_bill: {
     type: Number,
-  require: true
+    require: true
   },
   client_bill_pay: {
     type: Number,
