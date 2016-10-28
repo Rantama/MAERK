@@ -59,10 +59,10 @@
  </md-toolbar> -->
 
 <md-toolbar class="md-padding">
-  <div ng-cloak layout="row" md-is-locked-open="gt-md">
-   <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md>
+  <div ng-cloak layout="row" md-is-locked-open="gt-md" >
+   <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()" hide-gt-md ng-show ="isLoggedIn()">
      <md-tooltip>Side Panel</md-tooltip>
-    <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+    <md-icon class="md-default-theme" class="material-icons" >&#xE5D2;</md-icon>
   </md-button>
 
   <!-- <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links"> -->

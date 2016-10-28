@@ -2,7 +2,16 @@
   'use strict';
  // angular.module('maerkApp', ['ngMaterial', 'mdDataTable']);
   angular.module('maerkApp')
-    .controller('EmployeeController', function($scope, $http) {
+    .controller('EmployeeController', function($scope, $mdToast) {
+      $scope.deleteRowCallback = function(rows) {
+        $mdToast.show(
+          $mdToast.simple()
+          .content('Deleted row id(s): ' + rows)
+          .hideDelay()
+        );
+      };
+
+
       $scope.EmployeeInfo = [
     {
         name: 'Joe Kimble',
