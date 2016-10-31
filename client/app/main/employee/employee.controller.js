@@ -3,11 +3,11 @@
  // angular.module('maerkApp', ['ngMaterial', 'mdDataTable']);
   angular.module('maerkApp')
     .controller('EmployeeController', function($scope, $mdToast) {
-      $scope.deleteRowCallback = function(rows) {
+      $scope.deleteRowCallback = function(row) {
         $mdToast.show(
           $mdToast.simple()
           .content('Deleted row id(s): ' + rows)
-          .hideDelay()
+          .hideDelay(3000)
         );
       };
 
@@ -76,6 +76,7 @@
         recruiter: 'Himself',
         revenue: 25000000000
       }
+
     ];
 
    });

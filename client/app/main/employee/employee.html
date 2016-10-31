@@ -1,34 +1,97 @@
 <div layout-margin flex>
-  <md-card style="margin:0px">
-    <md-input-container style="margin:15px;">
-      <label>Filter by search</label>
-      <input type="text" ng-model="filterName">
-    </md-input-container>
+  <md-card style = "margin:0px">
+      <md-input-container style ="margin:15px;">
+          <label>Filter by search</label>
+          <input type = "text" ng-model ="filterName">
+      </md-input-container>
 
-    <div ng-hide="true">
-      {{(filteredItems = (EmployeeInfo | filter: filterName))}}
-    </div>
+      <div ng-hide ="true">
+          {{(filteredItems = (EmployeeInfo| filter: filterName))}}
+      </div>
   </md-card>
-  <mdt-table table-card="{visible: true, title: 'Employee'}"
+
+  <md-toolbar>
+
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Icon">
+          <md-tooltip>User</md-tooltip>
+          <md-icon class="md-default-theme" md-svg-icon="fb.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span>Employees</span>
+        </h2>
+        <span flex></span>
+        <md-button>
+          <md-table-row>
+          <md-icon <i class="material-icons">&#xE872;</i></md-icon>
+          Delete
+        </md-button>
+        </md-table-row>
+        <md-button >
+          <md-icon <i class="material-icons">&#xE8B9;</i></md-icon>
+          Setting
+        </md-button>
+        <md-content>
+          <md-list-item>
+            <p>Setting</p>
+
+            <md-menu class="md-secondary">
+              <md-button class="md-icon-button">
+                <md-icon md-svg-icon="communication:message"></md-icon>
+              </md-button>
+              <md-menu-content width="4">
+                <md-menu-item>
+                  <md-button>
+                    Activate
+                  </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                  <md-button>
+                    Deactivate
+                  </md-button>
+                </md-menu-item>
+
+
+          </md-list-item>
+
+   </div>
+
+  </md-toolbar>
+    <mdt-table
+
     selectable-rows="true"
-    alternate-headers="contextual"
+    alternate-headers="'contextual'"
     delete-row-callback = "deleteRowCallback(rows)"
     paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
-    >
+    save-row-callback="saveRowCallback(row)"
+
+    animate-sort-icon = "true"
+    mdt-row="{
+         'data': filteredItems,
+         'column-keys': [
+             'name',
+             'clients',
+             'skills',
+             'recruiter',
+             'revenue'
+         ]
+     }">
+      <md-button  class="md-icon-button" aria-label="Side Panel" ng-click="nav.openLeftSidenav()">
     <mdt-header-row>
-      <mdt-column align-rule="left" ß column-sort="true">Employee Name</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Employee Name</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Clients</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Revenue</mdt-column>
     </mdt-header-row>
 
-    <mdt-row
+    <!-- <mdt-row
         ng-repeat = "employee in EmployeeInfo">
         <mdt-cell> {{employee.name}}</mdt-cell>
         <mdt-cell> {{employee.clients}}</mdt-cell>
         <mdt-cell> {{employee.skills}}</mdt-cell>
         <mdt-cell> {{employee.recruiter}}</mdt-cell>
         <mdt-cell> {{employee.revenue}}</mdt-cell>
+    </mdt-row> -->
   </mdt-table>
 </div>
