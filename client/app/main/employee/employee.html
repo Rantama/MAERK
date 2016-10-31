@@ -14,7 +14,17 @@
     alternate-headers="'contextual'"
     delete-row-callback = "deleteRowCallback(rows)"
     paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
-    >
+
+    mdt-row="{
+         'data': filteredItems,
+         'column-keys': [
+             'name',
+             'clients',
+             'skills',
+             'recruiter',
+             'revenue'
+         ],
+     }">
     <mdt-header-row>
       <mdt-column align-rule="left" column-sort="true">Employee Name</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Clients</mdt-column>
