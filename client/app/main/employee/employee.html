@@ -1,22 +1,22 @@
 <div layout-margin flex>
-  <md-card style="margin:0px">
-    <md-input-container style="margin:15px;">
-      <label>Filter by search</label>
-      <input type="text" ng-model="filterName">
-    </md-input-container>
+  <md-card style = "margin:0px">
+      <md-input-container style ="margin:15px;">
+          <label>Filter by search</label>
+          <input type = "text" ng-model ="filterName">
+      </md-input-container>
 
-    <div ng-hide="true">
-      {{(filteredItems = (EmployeeInfo | filter: filterName))}}
-    </div>
+      <div ng-hide ="true">
+          {{(EmployeeInfo = (employeeList | filter: filterName))}}
+      </div>
   </md-card>
-  <mdt-table table-card="{visible: true, title: 'Employee'}"
+    <mdt-table table-card="{visible: true, title: 'Employee'}"
     selectable-rows="true"
-    alternate-headers="'persistent'"
+    alternate-headers="'contextual'"
     delete-row-callback = "deleteRowCallback(rows)"
     paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20]}"
     >
     <mdt-header-row>
-      <mdt-column align-rule="left" ß column-sort="true">Employee Name</mdt-column>
+      <mdt-column align-rule="left" column-sort="true">Employee Name</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Clients</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Skills</mdt-column>
       <mdt-column align-rule="left" column-sort="true">Recruiter</mdt-column>
@@ -30,5 +30,6 @@
         <mdt-cell> {{employee.skills}}</mdt-cell>
         <mdt-cell> {{employee.recruiter}}</mdt-cell>
         <mdt-cell> {{employee.revenue}}</mdt-cell>
+    </mdt-row>
   </mdt-table>
 </div>
